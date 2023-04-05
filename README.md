@@ -32,4 +32,6 @@ For more information on how each tool works:
 
 If you have idea for a new script, additional feature of existing script or want to learn more about Dynamo, Python and automations, please feel free to speak with Ivo.
 
+
+
 <work smarter | not harder>
