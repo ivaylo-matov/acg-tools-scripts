@@ -5,28 +5,28 @@ ACG Tools is a collection of Dynamo & Python scripts that automates various task
 
 ## Install all required components
 
-1. Ensure Revit is properly installed
-2. Open Dynamo from the Manage tab in Revit
-3. Edit Preferences to :
+- [x] Ensure Revit is properly installed
+- [x] Open Dynamo from the Manage tab in Revit
+- [x] Edit Preferences to :
   - load definition from R:\3600_IT\3605_BIM\3605_17_Dynamo\02-Definitions
   - set default Python engine to IronPython2
-4. Install latest version of Dyno Browser
+- [x] Install latest version of Dyno Browser
   - can be downloaded from http://prorubim.com/en/
-5. Paste all packages from R:\3600_IT\3605_BIM\3605_17_Dynamo\03-Packages\x.xx to
+- [x] Paste all packages from R:\3600_IT\3605_BIM\3605_17_Dynamo\03-Packages\x.xx to
    C:\Users\user.name\AppData\Roaming\Dynamo\Dynamo Revit\x.xx\packages
-6. Open Dyno Browser from the Manage tab in Revit
-7. Right click to Settings
-8. Add path to R:\3600_IT\3605_BIM\3605_17_Dynamo\01-Scripts\_Dyno Scripts
-9. Restart Revit
-10. Et voila!
+- [x] Open Dyno Browser from the Manage tab in Revit
+- [x] Right click to Settings
+- [x] Add path to R:\3600_IT\3605_BIM\3605_17_Dynamo\01-Scripts\_Dyno Scripts
+- [x] Restart Revit
+- [x] Et voila!
 
 ## How to use the tools
 
 For more information on how each tool works:
-  - read the quick description on top of the UI whe you run a tool
-  - see ACG's Revit Tutorials channel in MS Teams
-  - go to ACG's Automotion meets
-  - speak with Ivo
+- [x] Read the quick description on top of the UI whe you run a tool
+- [x] See ACG's Revit Tutorials channel in MS Teams
+- [x] Go to ACG's Automotion meets
+- [x] Speak with Ivo
 
 ## Getting involved
 
