@@ -5,12 +5,12 @@
 ACG Tools is a collection of 100 Dynamo & Python scripts that automates various tasks in Revit. Each tool helps architects work in efficient and consistent manner. Please note that this toolset is designed specigically for ACG Architects. To load the tools as buttons in a Revit 2022 (or earlier) you must install Dyno Browser and have access to the ACG's custom definitions.
 
 ## Table of Contants
- - [ ] [Install all required components](#install-all-required-components:)
- - [ ] [How to use the tools](#how-to-use-the-tools:)
- - [ ] [Getting involved](#getting-involved:)
- - [ ] [Acknowledgements](#acknowledgements)
+ - [x] [Install all required components](#install-all-required-components)
+ - [x] [How to use the tools](#how-to-use-the-tools)
+ - [x] [Getting involved](#getting-involved)
+ - [x] [Acknowledgements](#acknowledgements)
 
-## Install all required components:
+## Install all required components
 
 - [x] Ensure Revit is properly installed
 - [x] Open Dynamo from the Manage tab in Revit
@@ -27,7 +27,7 @@ ACG Tools is a collection of 100 Dynamo & Python scripts that automates various 
 - [x] Restart Revit
 - [x] Et voila!
 
-## How to use the tools:
+## How to use the tools
 
 For more information on how each tool works:
 - [x] Read the quick description on top of the UI whe you run a tool
@@ -35,7 +35,7 @@ For more information on how each tool works:
 - [x] Go to ACG's Automation meets
 - [x] Speak with Ivo
 
-## Getting involved:
+## Getting involved
 
 If you have idea for a new script, additional feature of existing script or want to learn more about Dynamo, Python and automations, please feel free to speak with Ivo.
 
