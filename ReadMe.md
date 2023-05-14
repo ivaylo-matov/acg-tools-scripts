@@ -37,6 +37,8 @@ For more information on how each tool works:
 - [x] Go to ACG's Automation meets
 - [x] Speak with Ivo
 
+![image](https://github.com/ivaylo-matov/acg-tools-dyn/assets/48355182/6b11e297-7655-4eb0-b502-b5868e022553)
+
 ## Getting involved
 
 If you have idea for a new script, additional feature of existing script or want to learn more about Dynamo, Python and automations, please feel free to speak with Ivo.
