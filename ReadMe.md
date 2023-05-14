@@ -33,6 +33,10 @@ For more information on how each tool works:
 
 If you have idea for a new script, additional feature of existing script or want to learn more about Dynamo, Python and automations, please feel free to speak with Ivo.
 
+## And lastly, a BIG thanks to :
 
+<a href="https://github.com/ivaylo-matov/kipple-1-cs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ivaylo-matov/kipple-1-cs" />
+</a>
 
 **<work smarter | not harder>**
