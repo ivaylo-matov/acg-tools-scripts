@@ -37,7 +37,7 @@ For more information on how each tool works:
 - [x] Go to ACG's Automation meets
 - [x] Speak with Ivo
 
-![image](https://github.com/ivaylo-matov/acg-tools-dyn/assets/48355182/6b11e297-7655-4eb0-b502-b5868e022553)
+<img src="https://github.com/ivaylo-matov/acg-tools-dyn/assets/48355182/6b11e297-7655-4eb0-b502-b5868e022553" alt="ACG Tools Dyn" width="400"/>
 
 ## Getting involved
 
