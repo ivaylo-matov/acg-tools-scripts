@@ -27,6 +27,8 @@ ACG Tools is a collection of 100 Dynamo & Python scripts that automates various 
 - [x] Restart Revit
 - [x] Et voila!
 
+![image](https://github.com/ivaylo-matov/acg-tools-dyn/assets/48355182/b6ae68af-4622-4a18-bb86-f64db6c0b846)
+
 ## How to use the tools
 
 For more information on how each tool works:
