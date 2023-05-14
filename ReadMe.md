@@ -41,10 +41,6 @@ If you have idea for a new script, additional feature of existing script or want
 
 ## Acknowledgements
 
-- [Contributors](#contributors)
-
-## Contributors
-
 <a href="https://github.com/ivaylo-matov/acg-tools-dyn/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ivaylo-matov/acg-tools-dyn" />
 </a>
