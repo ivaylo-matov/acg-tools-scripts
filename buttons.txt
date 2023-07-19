@@ -1,3 +1,0 @@
-{
-    "ACG Tools"  : ["Export PDF & DWG_py","Rename PDF_py","Issue Model","Archive Model_py","Export to PHPP","Capacity Studies","Schedules","Generate Walls & Floors","Other_py","Audit Tools","Checks_py","Content", "Isolate All_py","Isolate By Type_py","Resolve Warnings_py","Sheets_py","Views","Rooms & Areas","Kipple","Beta Scripts_py"]
- }
