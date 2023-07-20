@@ -1,0 +1,283 @@
+{
+  "Uuid": "a19d8f41-b681-4d82-a684-c47c9a10bfb8",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Isolate All",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "aef287f9-369d-4d31-92af-a18f6962a3d3",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "dcab371b2f4d430aa43f08d882ef17f4",
+      "Inputs": [
+        {
+          "Id": "2465fc52069a42e3b2f30cf42ade30a9",
+          "Name": "script_name",
+          "Description": "The name of the script that is run.\n\nstring\nDefault value : null (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "de3c0a9cc4164db9b443c05ca5332628",
+          "Name": "OUT",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Adds an entry to TXT document every time a script is run. The document is located in R:\\Dynamo\\05-UsageStats"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Isolate All\";",
+      "Id": "c92eb8d58f054653998953ab84bf3d79",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "189f28b2f8474f1cb8ef91651116c6de",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Load the Python Standard and DesignScript Libraries\r\nimport clr\r\nimport sys\r\nimport os.path\r\nfrom datetime import datetime\r\nfrom System import Environment\r\nsys.path.append('C:\\Program Files (x86)\\IronPython 2.7\\Lib')\r\nimport System\r\nfrom System import Array\r\nfrom System.Collections.Generic import *\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\nclr.AddReference(\"RevitNodes\")\r\nimport Revit\r\nclr.ImportExtensions(Revit.Elements)\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\nclr.AddReference(\"RevitServices\")\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager \r\nfrom RevitServices.Transactions import TransactionManager \r\n\r\nclr.AddReference(\"RevitAPI\")\r\nclr.AddReference(\"RevitAPIUI\")\r\n\r\nimport Autodesk \r\nfrom Autodesk.Revit.DB import *\r\nfrom Autodesk.Revit.UI import *\r\nimport time\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\nuiapp = DocumentManager.Instance.CurrentUIApplication \r\napp = uiapp.Application \r\nuidoc = uiapp.ActiveUIDocument\r\n\r\nrunMe = IN[0]\r\n\r\nif runMe:\r\n\twarnings = doc.GetWarnings()\r\n\tidsToIsolate = List[ElementId]()\r\n\t\r\n\tfor w in warnings:\r\n\t\tids = w.GetFailingElements()\r\n\t\tfor i in ids:\r\n\t\t\tidsToIsolate.Add(i)\r\n\t\t\t\r\n\tTransactionManager.Instance.EnsureInTransaction(doc)\r\n\tdoc.ActiveView.\tIsolateElementsTemporary(idsToIsolate)\r\n\tTransactionManager.Instance.TransactionTaskDone()",
+      "Engine": "IronPython2",
+      "EngineName": "IronPython2",
+      "VariableInputPorts": true,
+      "Id": "37f7e0aa44254d3abfdefa6bd3065b0c",
+      "Inputs": [
+        {
+          "Id": "ea703759a2fa4d8aad19cc181338fab0",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5bf556fc5ca643a19f8242af50932fb5",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "true;",
+      "Id": "44e1ec257f7948a1b7f7c9d9b661b116",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "90d37901f6da4337ae6623149755fed5",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "189f28b2f8474f1cb8ef91651116c6de",
+      "End": "2465fc52069a42e3b2f30cf42ade30a9",
+      "Id": "df6456170a5f4d439c47c9ac4640b7d6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "90d37901f6da4337ae6623149755fed5",
+      "End": "ea703759a2fa4d8aad19cc181338fab0",
+      "Id": "b709391a3d2a426fab03dc10e0f6f78b",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "aef287f9-369d-4d31-92af-a18f6962a3d3"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "ACG Script Usage.dyf",
+      "ReferenceType": "DYFFile",
+      "Nodes": [
+        "dcab371b2f4d430aa43f08d882ef17f4"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.17.1.4055",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "ACG Script Usage",
+        "ShowGeometry": true,
+        "Id": "dcab371b2f4d430aa43f08d882ef17f4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 738.57625066304843,
+        "Y": -53.927405002714067
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "c92eb8d58f054653998953ab84bf3d79",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 513.04490595272978,
+        "Y": -53.562797073994773
+      },
+      {
+        "Name": "Python Script",
+        "ShowGeometry": true,
+        "Id": "37f7e0aa44254d3abfdefa6bd3065b0c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 780.14934506723068,
+        "Y": 220.39860924481479
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "44e1ec257f7948a1b7f7c9d9b661b116",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 582.40106948056746,
+        "Y": 213.62052451180477
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "b94860144cb0424683a4fb5b1ef07117",
+        "Title": "Usage",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "dcab371b2f4d430aa43f08d882ef17f4",
+          "c92eb8d58f054653998953ab84bf3d79"
+        ],
+        "HasNestedGroups": false,
+        "Left": 503.04490595272978,
+        "Top": -112.92740500271407,
+        "Width": 472.53134471031865,
+        "Height": 191.36460792871929,
+        "FontSize": 24.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": -53.927405002714067,
+        "InitialHeight": 149.31154500378449,
+        "TextblockHeight": 49.0,
+        "Background": "#FFFFFF00"
+      },
+      {
+        "Id": "31e16a9d0ea940578de8c86938de9aa4",
+        "Title": "Isoate warning element in active view",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "37f7e0aa44254d3abfdefa6bd3065b0c",
+          "44e1ec257f7948a1b7f7c9d9b661b116"
+        ],
+        "HasNestedGroups": false,
+        "Left": 572.40106948056746,
+        "Top": 125.62052451180477,
+        "Width": 391.74827558666323,
+        "Height": 226.77808473301002,
+        "FontSize": 24.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 213.62052451180477,
+        "InitialHeight": 149.07599222341935,
+        "TextblockHeight": 78.0,
+        "Background": "#FFFF0000"
+      }
+    ],
+    "X": -49.29178499958789,
+    "Y": 434.21605565471543,
+    "Zoom": 0.71800181679805186
+  }
+}
