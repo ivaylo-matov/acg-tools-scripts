@@ -2,7 +2,7 @@
 
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/ivaylo-matov/acg-tools-dyn?color=yellow&label=release&style=for-the-badge)  ![GitHub repo file count](https://img.shields.io/github/directory-file-count/ivaylo-matov/acg-tools-dyn?color=red&style=for-the-badge)  ![GitHub repo size](https://img.shields.io/github/repo-size/ivaylo-matov/acg-tools-dyn?label=SIZE&style=for-the-badge)
 
-ACG Tools is a collection of 100 Dynamo & Python scripts that automates various tasks in Revit. Each tool helps architects work in efficient and consistent manner. Please note that this toolset is designed specigically for ACG Architects. To load the tools as buttons in a Revit 2022 (or earlier) you must install Dyno Browser and have access to the ACG's custom definitions.
+ACG Tools is a collection of 81 Dynamo & Python scripts that automates various tasks in Revit. Each tool helps architects work in efficient and consistent manner. Please note that this toolset is designed specially for ACG Architects. To load the tools as buttons in a Revit 2024 you must install Orkestra Browser and have access to the ACG's custom definitions or the ACG Tools package.
 
 ## Table of Contents
  - [x] [Install all required components](#install-all-required-components)
@@ -17,13 +17,13 @@ ACG Tools is a collection of 100 Dynamo & Python scripts that automates various 
 - [x] Edit Preferences to :
   - load definition from R:\3600_IT\3605_BIM\3605_17_Dynamo\02-Definitions
   - set default Python engine to IronPython2
-- [x] Install latest version of Dyno Browser
-  - can be downloaded from http://prorubim.com/en/
+- [x] Install latest version of Orkestra Browser
+  - can be downloaded from http:/orkestra.online
 - [x] Paste all packages from R:\3600_IT\3605_BIM\3605_17_Dynamo\03-Packages\x.xx to
    C:\Users\user.name\AppData\Roaming\Dynamo\Dynamo Revit\x.xx\packages
-- [x] Open Dyno Browser from the Manage tab in Revit
-- [x] Right click to Settings
-- [x] Add path to R:\3600_IT\3605_BIM\3605_17_Dynamo\01-Scripts\_Dyno Scripts
+- [x] Open Orkestra Browser from the Manage tab in Revit
+- [x] Go to Settings
+- [x] Add path to R:\3600_IT\3605_BIM\3605_17_Dynamo\01-Scripts\_Orkestra Scripts
 - [x] Restart Revit
 - [x] Et voila!
 
